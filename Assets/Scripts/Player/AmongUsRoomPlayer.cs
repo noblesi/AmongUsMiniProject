@@ -1,13 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-using UnityEngine.Rendering;
 
 public class AmongUsRoomPlayer : NetworkRoomPlayer
 {
     [SyncVar]
     public EPlayerColor playerColor;
+
+    private bool hasSpawned = false;
+
+    public void Start()
+    {
+        base.Start();
+
+        if (isServer && !hasSpawned)
+        {
+            SpawnLobbyPlayerCharacter();
+            hasSpawned = true;
+        }
+    }
 
     private void SpawnLobbyPlayerCharacter()
     {
@@ -37,9 +47,10 @@ public class AmongUsRoomPlayer : NetworkRoomPlayer
         playerColor = color;
 
 
-        //Vector3 spawnPos = FindObjectOfType<SpawnPositions>().GetSpawnPosition();
+        Vector3 spawnPos = FindObjectOfType<SpawnPositions>().GetSpawnPosition();
 
-        //var player = Instantiate(AmongUsRoomManager.singleton.spawnPrefabs[0], spawnPos, Quaternion.identity);
-        //NetworkServer.Spawn(player, connectionToClient);
+        var playerCharacter = Instantiate(AmongUsRoomManager.singleton.spawnPrefabs[0], spawnPos, Quaternion.identity).GetComponent<LobbyCharacterMover>();
+        NetworkServer.Spawn(playerCharacter.gameObject, connectionToClient);
+        playerCharacter.playerColor = color;
     }
 }

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{896C53D1-9922-AD61-BE34-96E6C177ED66}</ProjectGuid>
+    <ProjectGuid>{F6483C80-8292-1794-3D79-9E536C9ACE5E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Mirror.CodeGen</AssemblyName>
@@ -58,40 +58,40 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncVarAttributeProcessor.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncVarAttributeAccessReplacer.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Resolvers.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Readers.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncObjectInitializer.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\ReaderWriterProcessor.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\TypeReferenceComparer.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\TargetRpcProcessor.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPoint\EnterPlayModeHook.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorReflectionImporter.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Logger.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorHook.cs" />
     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\ServerClientAttributeProcessor.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorAssemblyResolver.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\AssemblyInfo.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\WeaverTypes.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Helpers.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\TargetRpcProcessor.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\SyncVarAccessLists.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPoint\CompilationFinishedHook.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\CommandProcessor.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\MonoBehaviourProcessor.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Logger.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorFromFile.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\CompiledAssemblyFromFile.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncVarAttributeProcessor.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Readers.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorReflectionImporter.cs" />
     <Compile Include="Assets\Mirror\Editor\Weaver\Extensions.cs" />
     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\NetworkBehaviourProcessor.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\SyncVarAccessLists.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorLogger.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Writers.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPoint\CompilationFinishedLogger.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorAssemblyResolver.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPoint\CompilationFinishedHook.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\MethodProcessor.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorReflectionImporterProvider.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\AssemblyInfo.cs" />
     <Compile Include="Assets\Mirror\Editor\Weaver\Weaver.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\WeaverTypes.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorFromFile.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Helpers.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\RpcProcessor.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\CommandProcessor.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\CompiledAssemblyFromFile.cs" />
     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncObjectProcessor.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncVarAttributeAccessReplacer.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\ReaderWriterProcessor.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\TypeReferenceComparer.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorLogger.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\RpcProcessor.cs" />
     <Compile Include="Assets\Mirror\Editor\Weaver\WeaverExceptions.cs" />
-    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\MonoBehaviourProcessor.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncObjectInitializer.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorHook.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Writers.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Processors\MethodProcessor.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\Resolvers.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPoint\EnterPlayModeHook.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPoint\CompilationFinishedLogger.cs" />
+    <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorReflectionImporterProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Editor\Weaver\Unity.Mirror.CodeGen.asmdef" />
@@ -431,6 +431,10 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
@@ -972,7 +976,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.csproj">
-      <Project>{2FB24CA3-ADCB-6262-0BF5-23F8D697478F}</Project>
+      <Project>{42CE45B3-029F-431A-15DF-E198DDA35FCF}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
   </ItemGroup>
