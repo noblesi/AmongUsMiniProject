@@ -9,7 +9,9 @@ public class AmongUsRoomManager : NetworkRoomManager
     {
         base.OnRoomServerConnect(conn);
 
-        var player = Instantiate(spawnPrefabs[0]);
+        var spawnPos = FindObjectOfType<SpawnPositions>().GetSpawnPosition();
+
+        var player = Instantiate(spawnPrefabs[0], spawnPos, Quaternion.identity);
         NetworkServer.Spawn(player, conn);
     }
 }

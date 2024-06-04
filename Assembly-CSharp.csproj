@@ -71,6 +71,10 @@
     <Compile Include="Assets\Scripts\AmongUsGamePlayer.cs" />
     <Compile Include="Assets\Scripts\GameRoomSettingsUI.cs" />
     <Compile Include="Assets\Scripts\CharacterMover.cs" />
+    <Compile Include="Assets\Scripts\LobbyCharacterMover.cs" />
+    <Compile Include="Assets\Scripts\SpawnPositions.cs" />
+    <Compile Include="Assets\Scripts\SpriteSorter.cs" />
+    <Compile Include="Assets\Scripts\SortingSprite.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
