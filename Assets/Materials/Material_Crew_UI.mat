@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4862906777094338242
+--- !u!114 &-7996750406852134425
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Material_Crew
+  m_Name: Material_Crew_UI
   m_Shader: {fileID: -6465566751694194690, guid: c07bc402295572d4bb403814c44e8f02, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
