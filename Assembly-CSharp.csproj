@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\AmongUsRoomPlayer.cs" />
     <Compile Include="Assets\Scripts\AmongUsGamePlayer.cs" />
     <Compile Include="Assets\Scripts\GameRoomSettingsUI.cs" />
+    <Compile Include="Assets\Scripts\CharacterMover.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
