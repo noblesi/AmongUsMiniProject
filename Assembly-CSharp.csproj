@@ -75,6 +75,11 @@
     <Compile Include="Assets\Scripts\UI\OnlineUI.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterMover.cs" />
     <Compile Include="Assets\Scripts\SpriteSorter.cs" />
+    <Compile Include="Assets\Scripts\ColorSelectButton.cs" />
+    <Compile Include="Assets\Scripts\UI\CustomizeUI.cs" />
+    <Compile Include="Assets\Scripts\Manager\LobbyUIManager.cs" />
+    <Compile Include="Assets\Scripts\OutlineObject.cs" />
+    <Compile Include="Assets\Scripts\CustomizeLaptop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
