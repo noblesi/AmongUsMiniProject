@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
 public class CreateRoomUI : MonoBehaviour
 {
@@ -120,6 +121,13 @@ public class CreateRoomUI : MonoBehaviour
                 Images_Crew[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    public void CreateRoom()
+    {
+        var manager = AmongUsRoomManager.singleton;
+
+        manager.StartHost();
     }
 }
 

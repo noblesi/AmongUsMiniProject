@@ -67,6 +67,9 @@
     <Compile Include="Assets\Scripts\CrewFloater.cs" />
     <Compile Include="Assets\Scripts\OnlineUI.cs" />
     <Compile Include="Assets\Scripts\AmongUsRoomManager.cs" />
+    <Compile Include="Assets\Scripts\AmongUsRoomPlayer.cs" />
+    <Compile Include="Assets\Scripts\AmongUsGamePlayer.cs" />
+    <Compile Include="Assets\Scripts\GameRoomSettingsUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

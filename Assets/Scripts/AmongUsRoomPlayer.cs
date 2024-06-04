@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class AmongUsRoomManager : NetworkRoomManager
+public class AmongUsRoomPlayer : NetworkRoomPlayer
 {
     
 }
