@@ -5,6 +5,9 @@ using Mirror;
 
 public class AmongUsRoomManager : NetworkRoomManager
 {
+    public int minPlayerCount;
+    public int imposterCount;
+
     public override void OnRoomServerConnect(NetworkConnectionToClient conn)
     {
         base.OnRoomServerConnect(conn);

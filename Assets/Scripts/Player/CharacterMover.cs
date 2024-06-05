@@ -7,7 +7,19 @@ public class CharacterMover : NetworkBehaviour
 {
     private Animator Animator_Character;
 
-    public bool isMoveable;
+    private bool isMoveable;
+    public bool IsMoveable
+    {
+        get { return isMoveable; }
+        set
+        {
+            if (!value)
+            {
+                Animator_Character.SetBool("isMove", false);
+            }
+            isMoveable = value;
+        }
+    }
 
     [SyncVar]
     public float speed = 2f;
@@ -49,7 +61,7 @@ public class CharacterMover : NetworkBehaviour
 
     public void Move()
     {
-        if(isOwned && isMoveable)
+        if(isOwned && IsMoveable)
         {
             bool isMove = false;
             if(PlayerSettings.controlType == EControlType.KeyboardMouse)
@@ -62,7 +74,7 @@ public class CharacterMover : NetworkBehaviour
             }
             else
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButton(0))
                 {
                     Vector3 dir = (Input.mousePosition - new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0f)).normalized;
                     if (dir.x < 0f) transform.localScale = new Vector3(-0.5f, 0.5f, 1f);

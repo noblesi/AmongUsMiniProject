@@ -24,7 +24,7 @@ public class LobbyCharacterMover : CharacterMover
     {
         if (isOwned)
         {
-            isMoveable = true;
+            IsMoveable = true;
         }
     }
 }

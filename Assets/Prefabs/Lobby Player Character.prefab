@@ -197,8 +197,10 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  isMoveable: 0
+  isMoveable: 1
   speed: 2
+  playerColor: 0
+  ownerNetId: 0
 --- !u!61 &5369747881255822604
 BoxCollider2D:
   m_ObjectHideFlags: 0

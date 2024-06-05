@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{72A70453-5778-34E0-AD7D-D23B31BE89DA}</ProjectGuid>
+    <ProjectGuid>{A547E6DD-D222-41F9-3C7B-D8911FC6C445}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Mirror.Components</AssemblyName>
@@ -439,10 +439,6 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.WebGL.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
@@ -1032,7 +1028,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.csproj">
-      <Project>{42CE45B3-029F-431A-15DF-E198DDA35FCF}</Project>
+      <Project>{2FB24CA3-ADCB-6262-0BF5-23F8D697478F}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
   </ItemGroup>
