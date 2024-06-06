@@ -83,6 +83,8 @@
     <Compile Include="Assets\Scripts\CustomizeLaptop.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterMover.cs" />
     <Compile Include="Assets\Scripts\SpriteSorter.cs" />
+    <Compile Include="Assets\Scripts\WeaponPipeLight.cs" />
+    <Compile Include="Assets\Scripts\WeaponPipeLightStarter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
