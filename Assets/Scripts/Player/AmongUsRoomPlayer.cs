@@ -24,8 +24,6 @@ public class AmongUsRoomPlayer : NetworkRoomPlayer
         }
     }
 
-
-
     [SyncVar(hook = nameof(SetPlayerColor_Hook))]
     public EPlayerColor playerColor;
 
@@ -35,7 +33,17 @@ public class AmongUsRoomPlayer : NetworkRoomPlayer
         LobbyUIManager.Instance.CustomizeUI.UpdateSelectColorButton(newColor);
     }
 
+    [SyncVar]
+    public string nickname;
+
     public CharacterMover lobbyPlayerCharacter;
+
+    [SyncVar]
+    public bool _readyToBegin;
+    public void SetReadyToBegin(bool value)
+    {
+        _readyToBegin = value;
+    }
 
     public void Start()
     {
@@ -44,15 +52,31 @@ public class AmongUsRoomPlayer : NetworkRoomPlayer
         if (isServer)
         {
             SpawnLobbyPlayerCharacter();
+            LobbyUIManager.Instance.ActiveStartButton();
         }
+
+        if(isLocalPlayer)
+        {
+            CommandSetNickname(PlayerSettings.nickName);
+        }
+
+        LobbyUIManager.Instance.GameRoomPlayerCounter.UpdatePlayerCount();
     }
 
     private void OnDestroy()
     {
         if (LobbyUIManager.Instance != null)
         {
+            LobbyUIManager.Instance.GameRoomPlayerCounter.UpdatePlayerCount();
             LobbyUIManager.Instance.CustomizeUI.UpdateUnselectColorButton(playerColor);
         }
+    }
+
+    [Command]
+    public void CommandSetNickname(string nick)
+    {
+        nickname = nick;
+        lobbyPlayerCharacter.nickname = nick;
     }
 
     [Command]

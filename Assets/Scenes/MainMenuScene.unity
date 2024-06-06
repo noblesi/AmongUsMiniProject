@@ -10771,7 +10771,7 @@ MonoBehaviour:
   evaluationMethod: 0
   evaluationInterval: 3
   timeInterpolationGui: 0
-  showRoomGUI: 1
+  showRoomGUI: 0
   minPlayers: 1
   roomPlayerPrefab: {fileID: 7773750653313859155, guid: 30a2d98a153305c458086c1b20c3ff61, type: 3}
   RoomScene: Assets/Scenes/LobbyScene.unity
@@ -10779,6 +10779,8 @@ MonoBehaviour:
   _allPlayersReady: 0
   roomSlots: []
   clientIndex: 0
+  minPlayerCount: 0
+  imposterCount: 0
 --- !u!114 &1286449246
 MonoBehaviour:
   m_ObjectHideFlags: 0

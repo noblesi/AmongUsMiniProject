@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5C4D77E3-3C1E-8081-1C70-B56080F38772}</ProjectGuid>
+    <ProjectGuid>{7D45F1AB-35FD-183B-5833-7F0D82AF9F85}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Mirror.Editor</AssemblyName>
@@ -409,6 +409,10 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
@@ -1022,11 +1026,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.csproj">
-      <Project>{2FB24CA3-ADCB-6262-0BF5-23F8D697478F}</Project>
+      <Project>{42CE45B3-029F-431A-15DF-E198DDA35FCF}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mirror.CodeGen.csproj">
-      <Project>{896C53D1-9922-AD61-BE34-96E6C177ED66}</Project>
+      <Project>{F6483C80-8292-1794-3D79-9E536C9ACE5E}</Project>
       <Name>Unity.Mirror.CodeGen</Name>
     </ProjectReference>
   </ItemGroup>
