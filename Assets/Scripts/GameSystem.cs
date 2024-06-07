@@ -51,6 +51,11 @@ public class GameSystem : NetworkBehaviour
 
     private void Start()
     {
-        StartCoroutine(GameReady());    
+        StartCoroutine(GameReady());
+
+        if (isServer)
+        {
+
+        }
     }
 }

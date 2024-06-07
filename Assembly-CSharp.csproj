@@ -86,6 +86,10 @@
     <Compile Include="Assets\Scripts\Player\CharacterMover.cs" />
     <Compile Include="Assets\Scripts\SpriteSorter.cs" />
     <Compile Include="Assets\Scripts\EngineBody.cs" />
+    <Compile Include="Assets\Scripts\Player\InGameCharacterMover.cs" />
+    <Compile Include="Assets\Scripts\GameSystem.cs" />
+    <Compile Include="Assets\Scripts\IntroCharacter.cs" />
+    <Compile Include="Assets\Scripts\InGameIntroUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
