@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{39D8C70C-9269-BB10-C667-2FD0D0B99ADD}</ProjectGuid>
+    <ProjectGuid>{F01AF0E1-6A3C-0FE0-F8C8-F2615AE5A0D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Mirror.Transports</AssemblyName>
@@ -411,10 +411,6 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.WebGL.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
@@ -1004,19 +1000,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.csproj">
-      <Project>{42CE45B3-029F-431A-15DF-E198DDA35FCF}</Project>
+      <Project>{2FB24CA3-ADCB-6262-0BF5-23F8D697478F}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
     <ProjectReference Include="kcp2k.csproj">
-      <Project>{FDEF8348-4CCE-00F3-F78E-53C9B77B566F}</Project>
+      <Project>{243A49F8-2C70-9656-020C-420449810CE3}</Project>
       <Name>kcp2k</Name>
     </ProjectReference>
     <ProjectReference Include="Telepathy.csproj">
-      <Project>{D5074D14-BBE2-4CFB-1A3A-D00B1672C547}</Project>
+      <Project>{3F5DE3AD-F5DF-9FE3-F82B-8EFA1F7174E7}</Project>
       <Name>Telepathy</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
-      <Project>{8CBFC851-C98E-5865-51B8-CF26351D0314}</Project>
+      <Project>{6693EB09-7A5C-B772-2479-23469CB241A2}</Project>
       <Name>SimpleWebTransport</Name>
     </ProjectReference>
   </ItemGroup>
