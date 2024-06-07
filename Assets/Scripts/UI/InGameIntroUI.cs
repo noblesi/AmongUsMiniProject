@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class InGameIntroUI : MonoBehaviour
 {
+    [SerializeField] private GameObject shhhhhObj;
+    [SerializeField] private GameObject crewmateObj;
+
     [SerializeField] private Text playerType;
     [SerializeField] private Image gradiantImage;
     [SerializeField] private IntroCharacter myCharacter;
@@ -12,6 +15,15 @@ public class InGameIntroUI : MonoBehaviour
     [SerializeField] private Color crewColor;
     [SerializeField] private Color imposterColor;
 
+    public IEnumerator ShowIntroSequence()
+    {
+        shhhhhObj.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        shhhhhObj.SetActive(false);
+
+        ShowPlayerType();
+        crewmateObj.SetActive(true);
+    }
     public void ShowPlayerType()
     {
         var players = GameSystem.Instance.GetPlayerList();
@@ -58,8 +70,6 @@ public class InGameIntroUI : MonoBehaviour
                     otherCharacters[i].gameObject.SetActive(true);
                     i++;
                 }
-
-                
             }
         }
     }

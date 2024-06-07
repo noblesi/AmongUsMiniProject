@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{49FE32D1-28AC-4C4D-57CA-FC7474B96BA2}</ProjectGuid>
+    <ProjectGuid>{F3EE603B-2F9E-7ACA-9A1C-F6B8BFE449A5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>EncryptionTransportEditor</AssemblyName>
@@ -398,6 +398,10 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
@@ -1011,7 +1015,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.Transports.csproj">
-      <Project>{F01AF0E1-6A3C-0FE0-F8C8-F2615AE5A0D0}</Project>
+      <Project>{39D8C70C-9269-BB10-C667-2FD0D0B99ADD}</Project>
       <Name>Mirror.Transports</Name>
     </ProjectReference>
   </ItemGroup>

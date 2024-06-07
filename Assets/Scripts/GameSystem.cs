@@ -37,6 +37,10 @@ public class GameSystem : NetworkBehaviour
                 i--;
             }
         }
+
+        yield return new WaitForSeconds(1f);
+
+        yield return StartCoroutine(InGameUIManager.Instance.InGameIntroUI.ShowIntroSequence());
     }
 
     public List<InGameCharacterMover> GetPlayerList()
@@ -52,10 +56,5 @@ public class GameSystem : NetworkBehaviour
     private void Start()
     {
         StartCoroutine(GameReady());
-
-        if (isServer)
-        {
-
-        }
     }
 }

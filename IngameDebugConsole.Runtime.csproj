@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{39D8C70C-9269-BB10-C667-2FD0D0B99ADD}</ProjectGuid>
+    <ProjectGuid>{17BBAACB-FD3F-1710-5F0B-02584DDD699C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Mirror.Transports</AssemblyName>
+    <AssemblyName>IngameDebugConsole.Runtime</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -27,7 +27,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,7 +36,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -58,27 +58,28 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Mirror\Transports\KCP\ThreadedKcpTransport.cs" />
-    <Compile Include="Assets\Mirror\Transports\Latency\LatencySimulation.cs" />
-    <Compile Include="Assets\Mirror\Transports\Encryption\EncryptionCredentials.cs" />
-    <Compile Include="Assets\Mirror\Transports\Edgegap\EdgegapRelay\EdgegapKcpServer.cs" />
-    <Compile Include="Assets\Mirror\Transports\SimpleWeb\Editor\ClientWebsocketSettingsDrawer.cs" />
-    <Compile Include="Assets\Mirror\Transports\Edgegap\EdgegapRelay\Protocol.cs" />
-    <Compile Include="Assets\Mirror\Transports\Encryption\PubKeyInfo.cs" />
-    <Compile Include="Assets\Mirror\Transports\Threaded\ThreadedTransport.cs" />
-    <Compile Include="Assets\Mirror\Transports\Edgegap\EdgegapRelay\EdgegapKcpClient.cs" />
-    <Compile Include="Assets\Mirror\Transports\Encryption\EncryptionTransport.cs" />
-    <Compile Include="Assets\Mirror\Transports\Telepathy\TelepathyTransport.cs" />
-    <Compile Include="Assets\Mirror\Transports\Multiplex\MultiplexTransport.cs" />
-    <Compile Include="Assets\Mirror\Transports\Encryption\EncryptedConnection.cs" />
-    <Compile Include="Assets\Mirror\Transports\Middleware\MiddlewareTransport.cs" />
-    <Compile Include="Assets\Mirror\Transports\Edgegap\EdgegapRelay\EdgegapKcpTransport.cs" />
-    <Compile Include="Assets\Mirror\Transports\KCP\KcpTransport.cs" />
-    <Compile Include="Assets\Mirror\Transports\Edgegap\EdgegapRelay\RelayCredentialsFromArgs.cs" />
-    <Compile Include="Assets\Mirror\Transports\SimpleWeb\SimpleWebTransport.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\ConsoleMethodAttribute.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\InputFieldWarningsFixer.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\CircularBuffer.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogResizeListener.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogConsole.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogRecycledListView.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Android\DebugLogLogcatListener.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogPopup.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogEntry.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogItemCopyWebGL.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugsOnScrollListener.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\Commands\SceneCommands.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\Commands\TimeCommands.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogItem.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\Commands\PlayerPrefsCommands.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\EventSystemHandler.cs" />
+    <Compile Include="Assets\Plugins\IngameDebugConsole\Scripts\DebugLogManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Mirror\Transports\Mirror.Transports.asmdef" />
+    <None Include="Assets\Plugins\IngameDebugConsole\iOS\IngameDebugConsole.mm" />
+    <None Include="Assets\Plugins\IngameDebugConsole\IngameDebugConsole.Runtime.asmdef" />
+    <None Include="Assets\Plugins\IngameDebugConsole\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1003,22 +1004,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Mirror.csproj">
-      <Project>{42CE45B3-029F-431A-15DF-E198DDA35FCF}</Project>
-      <Name>Mirror</Name>
-    </ProjectReference>
-    <ProjectReference Include="kcp2k.csproj">
-      <Project>{FDEF8348-4CCE-00F3-F78E-53C9B77B566F}</Project>
-      <Name>kcp2k</Name>
-    </ProjectReference>
-    <ProjectReference Include="Telepathy.csproj">
-      <Project>{D5074D14-BBE2-4CFB-1A3A-D00B1672C547}</Project>
-      <Name>Telepathy</Name>
-    </ProjectReference>
-    <ProjectReference Include="SimpleWebTransport.csproj">
-      <Project>{8CBFC851-C98E-5865-51B8-CF26351D0314}</Project>
-      <Name>SimpleWebTransport</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
