@@ -19,6 +19,14 @@ public class InGameCharacterMover : CharacterMover
         transform.position = position;
     }
 
+    public void SetNicknameColor(EPlayerType type)
+    {
+        if(playerType == EPlayerType.Imposter && type == EPlayerType.Imposter)
+        {
+            nicknameText.color = Color.red;
+        }
+    }
+
     public override void Start()
     {
         base.Start();
