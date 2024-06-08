@@ -2,6 +2,7 @@ using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public enum EPlayerType
 {
@@ -12,6 +13,11 @@ public class InGameCharacterMover : CharacterMover
 {
     [SyncVar] public EPlayerType playerType;
 
+    [ClientRpc]
+    public void RpcTeleport(Vector3 position)
+    {
+        transform.position = position;
+    }
 
     public override void Start()
     {

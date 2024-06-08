@@ -9,6 +9,9 @@ public class GameSystem : NetworkBehaviour
 
     private List<InGameCharacterMover> players = new List<InGameCharacterMover>();
 
+    [SerializeField] private Transform spawnTransform;
+    [SerializeField] private float spawnDistance;
+
     public void AddPlayer(InGameCharacterMover player)
     {
         if (!players.Contains(player))
@@ -36,6 +39,13 @@ public class GameSystem : NetworkBehaviour
             {
                 i--;
             }
+        }
+
+        for(int i = 0; i < players.Count; i++)
+        {
+            float radian = (2f * Mathf.PI) / players.Count;
+            radian *= i;
+            players[i].RpcTeleport(spawnTransform.position + (new Vector3(Mathf.Cos(radian), Mathf.Sin(radian), 0f) * spawnDistance));
         }
 
         yield return new WaitForSeconds(1f);
