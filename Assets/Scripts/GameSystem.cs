@@ -40,7 +40,21 @@ public class GameSystem : NetworkBehaviour
 
         yield return new WaitForSeconds(1f);
 
+        RpcStartGame();
+    }
+
+    [ClientRpc]
+    private void RpcStartGame()
+    {
+        StartCoroutine(StartGameCoroutine());
+    }
+
+    private IEnumerator StartGameCoroutine()
+    {
         yield return StartCoroutine(InGameUIManager.Instance.InGameIntroUI.ShowIntroSequence());
+
+        yield return new WaitForSeconds(3f);
+        InGameUIManager.Instance.InGameIntroUI.Close();
     }
 
     public List<InGameCharacterMover> GetPlayerList()
@@ -55,6 +69,9 @@ public class GameSystem : NetworkBehaviour
 
     private void Start()
     {
-        StartCoroutine(GameReady());
+        if (isServer)
+        {
+            StartCoroutine(GameReady());
+        }
     }
 }

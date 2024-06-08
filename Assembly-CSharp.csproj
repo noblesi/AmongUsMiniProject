@@ -88,9 +88,9 @@
     <Compile Include="Assets\Scripts\CustomizeLaptop.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterMover.cs" />
     <Compile Include="Assets\Scripts\UI\InGameIntroUI.cs" />
+    <Compile Include="Assets\Scripts\Manager\InGameUIManager.cs" />
     <Compile Include="Assets\Scripts\SpriteSorter.cs" />
     <Compile Include="Assets\Scripts\EngineBody.cs" />
-    <Compile Include="Assets\Scripts\Manager\InGameUIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
@@ -1309,14 +1309,6 @@
     <ProjectReference Include="EncryptionTransportEditor.csproj">
       <Project>{F3EE603B-2F9E-7ACA-9A1C-F6B8BFE449A5}</Project>
       <Name>EncryptionTransportEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="IngameDebugConsole.Editor.csproj">
-      <Project>{F0150259-053C-354F-B74B-81AAD6886CE1}</Project>
-      <Name>IngameDebugConsole.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="IngameDebugConsole.Runtime.csproj">
-      <Project>{17BBAACB-FD3F-1710-5F0B-02584DDD699C}</Project>
-      <Name>IngameDebugConsole.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

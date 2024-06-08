@@ -15,6 +15,8 @@ public class InGameIntroUI : MonoBehaviour
     [SerializeField] private Color crewColor;
     [SerializeField] private Color imposterColor;
 
+    [SerializeField] private CanvasGroup canvasGroup;
+
     public IEnumerator ShowIntroSequence()
     {
         shhhhhObj.SetActive(true);
@@ -72,5 +74,23 @@ public class InGameIntroUI : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Close()
+    {
+        StartCoroutine(FadeOut());
+    }
+
+    private IEnumerator FadeOut()
+    {
+        float timer = 0f;
+        while(timer <= 1f)
+        {
+            yield return null;
+            timer += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(1f, 0f, timer);
+        }
+
+        gameObject.SetActive(false);
     }
 }
